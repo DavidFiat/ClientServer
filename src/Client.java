@@ -58,7 +58,6 @@ public class Client {
 			BufferedReader br = new BufferedReader(new InputStreamReader(socket.getInputStream()));
 			br.close();
 			bw.flush();
-			socket.close();
 
 		} catch (IOException e) {
 			e.printStackTrace();
