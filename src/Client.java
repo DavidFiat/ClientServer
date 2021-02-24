@@ -56,6 +56,7 @@ public class Client {
 			BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(socket.getOutputStream()));
 			bw.write(message);
 			BufferedReader br = new BufferedReader(new InputStreamReader(socket.getInputStream()));
+			br.close();
 			bw.flush();
 			socket.close();
 

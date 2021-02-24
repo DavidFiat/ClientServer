@@ -11,9 +11,10 @@ public class Server {
 	public static void main(String[] args) {
 
 		try {
+			@SuppressWarnings("resource")
+			ServerSocket server = new ServerSocket(5003);
 			while (true) {
-				@SuppressWarnings("resource")
-				ServerSocket server = new ServerSocket(5003);
+
 				System.out.println("Waiting conection");
 				Socket socket = server.accept();
 				System.out.println("Connected.");
