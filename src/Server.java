@@ -14,7 +14,7 @@ public class Server {
 			@SuppressWarnings("resource")
 			ServerSocket server = new ServerSocket(5003);
 			while (true) {
-
+				System.out.println("____________________");
 				System.out.println("Waiting conection");
 				Socket socket = server.accept();
 				System.out.println("Connected.");
@@ -45,7 +45,7 @@ public class Server {
 				}
 
 				bw.flush();
-
+				socket.close();
 			}
 
 		} catch (
