@@ -29,7 +29,7 @@ public class Server {
 					bw.write(local);
 				} else if (option.equals("interface")) {
 
-					InetAddress address = socket.getInetAddress();
+					InetAddress address = InetAddress.getLocalHost();
 					NetworkInterface net = NetworkInterface.getByInetAddress(address);
 					bw.write(net.getName());
 

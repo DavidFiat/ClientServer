@@ -53,8 +53,8 @@ public class Client {
 
 		try {
 			System.out.println("Sending request...");
-			// Socket socket = new Socket("127.0.0.1", 5003);
-			Socket socket = new Socket("2.tcp.ngrok.io", 13819);
+			Socket socket = new Socket("127.0.0.1", 5003);
+			// Socket socket = new Socket("2.tcp.ngrok.io", 13819);
 			System.out.println("Connected...");
 			BufferedWriter bw = new BufferedWriter(new OutputStreamWriter(socket.getOutputStream()));
 			bw.write(message);
